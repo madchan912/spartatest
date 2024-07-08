@@ -2,6 +2,7 @@ package com.sparta.goal.service;
 
 import com.sparta.goal.dto.GoalRequestDto;
 import com.sparta.goal.dto.GoalResponseDto;
+import com.sparta.goal.dto.GoalSelectDto;
 import com.sparta.goal.entity.Goal;
 import com.sparta.goal.repository.GoalRepository;
 import org.springframework.stereotype.Service;
@@ -30,8 +31,8 @@ public class GoalService {
         return goalResponseDto;
     }
 
-    public List<GoalResponseDto> getGoals() {
-        return goalRepository.findAllByOrderByModifiedAtDesc().stream().map(GoalResponseDto::new).toList();
+    public List<GoalSelectDto> getGoals() {
+        return goalRepository.findAllByOrderByModifiedAtDesc().stream().map(GoalSelectDto::new).toList();
     }
 
     @Transactional

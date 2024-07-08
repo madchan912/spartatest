@@ -17,8 +17,8 @@ public class Goal extends Timestamped{
     private int id;
     @Column(name = "username", nullable = false)
     private String username;
-    @Column(name = "contents", nullable = false, length = 500)
-    private String contents;
+    @Column(name = "content", nullable = false, length = 500)
+    private String content;
     @Column(name = "title", nullable = false, length = 500)
     private String title;
     @Column(name = "price", nullable = false, length = 500)
@@ -26,14 +26,14 @@ public class Goal extends Timestamped{
 
     public Goal(GoalRequestDto requestDto) {
         this.username = requestDto.getUsername();
-        this.contents = requestDto.getContents();
+        this.content = requestDto.getContent();
         this.title = requestDto.getTitle();
         this.price = requestDto.getPrice();
     }
 
     public void update(GoalRequestDto requestDto) {
         this.username = requestDto.getUsername();
-        this.contents = requestDto.getContents();
+        this.content = requestDto.getContent();
         this.title = requestDto.getTitle();
         this.price = requestDto.getPrice();
     }

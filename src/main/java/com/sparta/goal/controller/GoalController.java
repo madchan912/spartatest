@@ -2,6 +2,7 @@ package com.sparta.goal.controller;
 
 import com.sparta.goal.dto.GoalRequestDto;
 import com.sparta.goal.dto.GoalResponseDto;
+import com.sparta.goal.dto.GoalSelectDto;
 import com.sparta.goal.service.GoalService;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,7 +22,7 @@ public class GoalController {
     }
 
     @GetMapping("/post")
-    public List<GoalResponseDto> getGoals() {
+    public List<GoalSelectDto> getGoals() {
         return goalService.getGoals();
     }
 

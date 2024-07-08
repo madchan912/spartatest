@@ -6,19 +6,17 @@ import lombok.Getter;
 import java.time.LocalDateTime;
 
 @Getter
-public class GoalResponseDto {
+public class GoalSelectDto {
     private int id;
     private String title;
-    private String content;
     private String username;
     private int price;
     private LocalDateTime createdAt;
     private LocalDateTime modifiedAt;
 
-    public GoalResponseDto(Goal goal) {
+    public GoalSelectDto(Goal goal) {
         this.id = goal.getId();
         this.title = goal.getTitle();
-        this.content = goal.getContent();
         this.username = goal.getUsername();
         this.price = goal.getPrice();
         this.createdAt = goal.getCreatedAt();
